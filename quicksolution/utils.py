@@ -3,7 +3,7 @@ import pytz
 
 class Utils:
     def __init__(self):
-        self.count = 0
+        self.max_rate = 100
 
     def convertTimestampToInt(self, timestamp):
         ##Convert timestamp to integer
@@ -17,8 +17,8 @@ class Utils:
     def analizeRequest(self, request_ts, bypass, max_rate):
         ## Implement argorithm
         present_rate = 0
-        last_1hour = int(request_ts[-1] - 3600)
-        # print(sorted(request_ts, reverse=True))
+        
+        last_1hour = int(request_ts[-1] - 3600)  ## 1 Hour = 3600 second
 
         if request_ts[0] >= last_1hour:
             bypass.append(0)

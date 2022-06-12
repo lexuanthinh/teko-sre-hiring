@@ -18,9 +18,12 @@ if __name__ == '__main__':
     lines = loadData(file_path)
 
     for line in lines:
+        ## Get max rate from input file
         if cnt == 0:
             max_rate = line.split()[1]
             cnt = 1
+
+        ## Handle the requests timestamp  
         elif cnt != 0:
             ts = utils.convertTimestampToInt(line)
             request_ts.append(ts)
