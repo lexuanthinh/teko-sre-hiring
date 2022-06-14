@@ -8,13 +8,15 @@ def loadData(path):
         lines = f.readlines()
     return lines
 
-def writeOutput(path):
-    pass
+def writeOutput(path, res):
+    with open(path, mode = 'wt', encoding = 'utf-8') as output:
+        output.write('\n'.join(str(r) for r in res))
 
 if __name__ == '__main__':
     utils = Utils()
     cnt = 0
-    file_path = 'input.txt'
+    # file_path = 'input.txt'
+    file_path = str(input("Enter the input txt file path (default input.txt): ") or "input.txt")
     lines = loadData(file_path)
 
     for line in lines:
@@ -34,4 +36,8 @@ if __name__ == '__main__':
             
         print(bypass)    
         print('-'*50)
+    
+    ## Write result to output file
+    bool_bypass = list(map(bool, bypass))
 
+    writeOutput('output.txt', bool_bypass)

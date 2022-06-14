@@ -1,0 +1,5 @@
+2022-06-09 22:50:34,515 - INFO - [127.0.0.1][CALL][GET] /ping
+2022-06-09 22:50:34,515 - INFO - [127.0.0.1][RES][GET] /ping
+2022-06-09 22:50:34,610 - INFO - [127.0.0.1][CALL][GET] /favicon.ico
+2022-06-09 22:50:34,610 - ERROR - 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2022-06-09 22:50:34,611 - INFO - [127.0.0.1][RES][GET] /favicon.ico

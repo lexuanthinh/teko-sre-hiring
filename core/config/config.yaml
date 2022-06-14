@@ -1,0 +1,7 @@
+env: dev
+dev:
+  log_config:
+    file_name: log_file.log
+    when: midnight
+    interval: 1
+    backup_count: 365
